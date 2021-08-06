@@ -95,8 +95,6 @@ class Inputs {
       }.bind(this))
     })
 
-
-
     document.onclick = function(e){
       popUp.classList.add('hide')
     };
