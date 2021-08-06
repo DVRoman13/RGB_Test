@@ -25,11 +25,11 @@ class Inputs {
     };
     this.phoneTypes = {
       usa: {
-        img: '../img/us.svg',
+        img: '../build/img/us.svg',
         mask: '(999)-999-9999'
       },
       ukraine: {
-        img: '../img/ukraine.svg',
+        img: '../build/img/ukraine.svg',
         mask: '+380 99 999 9999'
       }
     }
