@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/index.min.css">
+    <title>RGB</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container flex">
+        <div class="form_wrap">
+            <div class="form_wrap-heading">
+                <h1 class="form_wrap-heading-title">Анкета Front-end разработчика</h1>
+                <p class="form_wrap-heading-subtitle">Введите свои данные</p>
+            </div>
+            <div class="form_inner">
+                <form class="form">
+                    <input type="hidden" name="project_name" value="test">
+                    <input type="hidden" name="admin_email" value="ekaterinadunaeva1@gmail.com">
+                    <input type="hidden" name="form_subject" value="заявка">
+                    <label>
+                        <span class="label_name">Имя</span>
+                        <input type="text" placeholder="Имя" data-type="text" data-name="name" name="name"  class="custom_inputs">
+                        <p class="error-valid hide"></p>
+                    </label>
+                    <label>
+                        <span class="label_name">Фамилия</span>
+                        <input type="text" placeholder="Фамилия" data-type="text" data-name="lastname" name="lastname" class="custom_inputs">
+                        <p class="error-valid hide"></p>
+                    </label>
+                    <label>
+                        <span class="label_name">E-mail</span>
+                        <input type="text" placeholder="E-mail" data-type="email" class="custom_inputs" data-name="email" name="email">
+                        <p class="error-valid hide"></p>
+                    </label>
+                    <label>
+                        <span class="label_name">Телефон</span>
+                        <span class="phone_country"><img src="../src/img/ukraine.svg" alt=""></span>
+                        <div class="phone_country_dropdown hide">
+                            <ul>
+                                <li data-name="ukraine"><img src="../src/img/ukraine.svg" alt=""></li>
+                                <li data-name="usa"><img src="../src/img/us.svg" alt=""></li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="Телефон" data-type="phone" class="phone_input custom_inputs" data-name="phone">
+                        <p class="error-valid hide"></p>
+                    </label>
+                    <label>
+                        <span class="label_name">Город проживания</span>
+                        <input type="text" placeholder="Город проживания" data-type="text" class="custom_inputs" data-name="city">
+                        <p class="error-valid hide"></p>
+                    </label>
+                    <div class="custom-select">
+                        <div class="custom-select-field">
+                            <span class="label_name">Навыки</span>
+                        </div>
+                        <p class="error-valid hide">Выберите навыки</p>
+                        <div class="custom-select-dropdown hide"></div>
+                    </div>
+                    <label class="text-aria-label">
+                        <span class="label_name">Немного о себе</span>
+                        <textarea placeholder="Немного о себе" data-role="none" data-type="text"  data-textarea class="custom_inputs" data-name="textarea" maxlength="130"></textarea>
+                        <p class="error-valid hide"></p>
+                        <span class="top_line"></span>
+                        <span class="center_line"></span>
+                    </label>
+                </form>
+                <button id="form_button">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="build/js/inputmask.js"></script>
+    <script src="build/js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+@import "styles/reset";
+@import "styles/fonts";
+@import "styles/vars";
+@import "styles/mixins";
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 154px 0 79px;
+  @media screen and (max-width: 414px) {
+    height: initial;
+  }
+}
+
+.form_wrap {
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  background: #F1F1F1;
+  border-radius: 10px;
+  padding: 54px 62px 69px;
+  @media screen and (max-width: 414px) {
+    padding: 54px 15px 69px;
+  }
+  &-heading {
+    margin-bottom: 45px;
+    &-title {
+      @include fontStyle(38px, 45px, $titleColor, $fontR, 0);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    &-text {
+      @include fontStyle(16px, 45px, $titleColor, $fontR, 0);
+      font-weight: 900;
+    }
+  }
+
+  .form_inner {
+    text-align: left;
+    label {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: left;
+      position: relative;
+      .label_name {
+        display: none;
+        margin-bottom: 11px;
+        @include fontStyle(12px, 14.63px, $labelColor, $fontM, 0);
+        font-weight: 300;
+        position: absolute;
+        top: -21px;
+        left: 6px;
+      }
+      .phone_country {
+        display: block;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        img {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        margin-bottom: 32px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $inputBorderDefault;
+        padding-bottom: 11px;
+        padding-left: 6px;
+        background: none;
+        height: 30px;
+        outline: none;
+        @include fontStyle(15px, 18.29px, $inputColor, $fontM, 0);
+        font-weight: 400;
+        &::placeholder {
+          @include fontStyle(15px, 18.29px, $inputPlaceholder, $fontM, 0);
+        }
+        &.error {
+          border-color: $inputBorderError;
+        }
+
+        &.success {
+          border-color: $inputBorderSuccess;
+        }
+      }
+
+      .phone_country_dropdown {
+        background: #fff;
+        position: absolute;
+        top: 20px;
+        left: -7px;
+        z-index: 2;
+        padding: 5px;
+        li {
+          cursor: pointer;
+          width: 28px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      textarea {
+        height: 90px;
+        resize: none;
+        line-height: 31px;
+        overflow: hidden;
+      }
+      .phone_input {
+        padding-left: 48px;
+      }
+
+      .top_line,
+      .center_line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $inputBorderDefault;
+        top: 29px;
+        left: 0;
+        &.focused {
+          top: 57px;
+        }
+      }
+
+      .center_line {
+        top: 60px;
+        &.focused {
+          top: 88px;
+        }
+      }
+
+      .error-valid {
+        @include fontStyle(10px, 10px, $inputBorderError, $fontM, 0);
+        padding-left: 6px;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+      }
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      @include buttons (15px,199px, $green, 16px, #fff, none, 17.61px, 0, $fontR);
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  .custom-select {
+    min-height: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+
+    .error-valid {
+      @include fontStyle(10px, 10px, $inputBorderError, $fontM, 0);
+      padding-left: 6px;
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+    }
+    &-field {
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid $inputBorderDefault;
+      .label_name  {
+        padding-left: 6px;
+        @include fontStyle(15px, 18.29px, $inputPlaceholder, $fontM, 0);
+      }
+
+      .selected_options {
+        display: inline-block;
+        background: #fff;
+        padding: 4px 16px 3px 6px;
+        margin-top: 3px;
+        @include fontStyle(15px, 18.29px, $inputColor, $fontM, 0);
+        position: relative;
+        margin-right: 10px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        .del {
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          width: 5px;
+          height: 5px;
+          display: block;
+          z-index: 10;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 5px;
+            background-image: url("../img/close.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    &-dropdown {
+      max-width: 238px;
+      width: 100%;
+      max-height: 170px;
+      height: auto;
+      background: #fff;
+      padding: 17px 0 0 17px;
+      overflow: scroll;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      span {
+        display: block;
+        @include fontStyle(14px, 17px, $inputColor, $fontM, 0);
+        margin-bottom: 13px;
+        cursor: pointer;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+

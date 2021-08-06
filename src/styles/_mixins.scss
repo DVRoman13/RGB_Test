@@ -1,0 +1,22 @@
+@mixin fontStyle($fz, $lh, $color, $fontF, $ls) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+  font-family: $fontF;
+  letter-spacing: $ls;
+}
+
+
+@mixin buttons ($fz,$width, $bg, $pt, $color, $brSettings, $lh, $ls, $ff) {
+  font-size: $fz;
+  width: $width;
+  background: $bg;
+  padding: $pt 0;
+  display: block;
+  color: $color;
+  border: $brSettings;
+  text-align: center;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-family: $ff
+}

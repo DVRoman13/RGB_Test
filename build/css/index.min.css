@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.flex {
+  display: flex; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 154px 0 79px; }
+  @media screen and (max-width: 414px) {
+    .container {
+      height: initial; } }
+
+.form_wrap {
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  background: #F1F1F1;
+  border-radius: 10px;
+  padding: 54px 62px 69px; }
+  @media screen and (max-width: 414px) {
+    .form_wrap {
+      padding: 54px 15px 69px; } }
+  .form_wrap-heading {
+    margin-bottom: 45px; }
+    .form_wrap-heading-title {
+      font-size: 38px;
+      line-height: 45px;
+      color: #333333;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 0;
+      font-weight: 900;
+      margin-bottom: 12px; }
+    .form_wrap-heading-text {
+      font-size: 16px;
+      line-height: 45px;
+      color: #333333;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 0;
+      font-weight: 900; }
+  .form_wrap .form_inner {
+    text-align: left; }
+    .form_wrap .form_inner label {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: left;
+      position: relative; }
+      .form_wrap .form_inner label .label_name {
+        display: none;
+        margin-bottom: 11px;
+        font-size: 12px;
+        line-height: 14.63px;
+        color: #434343;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0;
+        font-weight: 300;
+        position: absolute;
+        top: -21px;
+        left: 6px; }
+      .form_wrap .form_inner label .phone_country {
+        display: block;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; }
+        .form_wrap .form_inner label .phone_country img {
+          width: 100%; }
+      .form_wrap .form_inner label:last-child {
+        margin-bottom: 32px; }
+      .form_wrap .form_inner label input,
+      .form_wrap .form_inner label textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #1B1B1B;
+        padding-bottom: 11px;
+        padding-left: 6px;
+        background: none;
+        height: 30px;
+        outline: none;
+        font-size: 15px;
+        line-height: 18.29px;
+        color: #222222;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0;
+        font-weight: 400; }
+        .form_wrap .form_inner label input::-moz-placeholder, .form_wrap .form_inner label textarea::-moz-placeholder {
+          font-size: 15px;
+          line-height: 18.29px;
+          color: #888888;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 0; }
+        .form_wrap .form_inner label input:-ms-input-placeholder, .form_wrap .form_inner label textarea:-ms-input-placeholder {
+          font-size: 15px;
+          line-height: 18.29px;
+          color: #888888;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 0; }
+        .form_wrap .form_inner label input::placeholder,
+        .form_wrap .form_inner label textarea::placeholder {
+          font-size: 15px;
+          line-height: 18.29px;
+          color: #888888;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 0; }
+        .form_wrap .form_inner label input.error,
+        .form_wrap .form_inner label textarea.error {
+          border-color: #B41418; }
+        .form_wrap .form_inner label input.success,
+        .form_wrap .form_inner label textarea.success {
+          border-color: #A5B330; }
+      .form_wrap .form_inner label .phone_country_dropdown {
+        background: #fff;
+        position: absolute;
+        top: 20px;
+        left: -7px;
+        z-index: 2;
+        padding: 5px; }
+        .form_wrap .form_inner label .phone_country_dropdown li {
+          cursor: pointer;
+          width: 28px; }
+          .form_wrap .form_inner label .phone_country_dropdown li img {
+            width: 100%; }
+      .form_wrap .form_inner label textarea {
+        height: 90px;
+        resize: none;
+        line-height: 31px;
+        overflow: hidden; }
+      .form_wrap .form_inner label .phone_input {
+        padding-left: 48px; }
+      .form_wrap .form_inner label .top_line,
+      .form_wrap .form_inner label .center_line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #1B1B1B;
+        top: 29px;
+        left: 0; }
+        .form_wrap .form_inner label .top_line.focused,
+        .form_wrap .form_inner label .center_line.focused {
+          top: 57px; }
+      .form_wrap .form_inner label .center_line {
+        top: 60px; }
+        .form_wrap .form_inner label .center_line.focused {
+          top: 88px; }
+      .form_wrap .form_inner label .error-valid {
+        font-size: 10px;
+        line-height: 10px;
+        color: #B41418;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0;
+        padding-left: 6px;
+        position: absolute;
+        bottom: -15px;
+        left: 0; }
+    .form_wrap .form_inner button {
+      display: block;
+      margin: 0 auto;
+      font-size: 15px;
+      width: 199px;
+      background: #A5B330;
+      padding: 16px 0;
+      display: block;
+      color: #fff;
+      border: none;
+      text-align: center;
+      line-height: 17.61px;
+      letter-spacing: 0;
+      font-family: "Raleway", sans-serif;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer; }
+  .form_wrap .custom-select {
+    min-height: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1; }
+    .form_wrap .custom-select .error-valid {
+      font-size: 10px;
+      line-height: 10px;
+      color: #B41418;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 0;
+      padding-left: 6px;
+      position: absolute;
+      bottom: -16px;
+      left: 0; }
+    .form_wrap .custom-select-field {
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid #1B1B1B; }
+      .form_wrap .custom-select-field .label_name {
+        padding-left: 6px;
+        font-size: 15px;
+        line-height: 18.29px;
+        color: #888888;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0; }
+      .form_wrap .custom-select-field .selected_options {
+        display: inline-block;
+        background: #fff;
+        padding: 4px 16px 3px 6px;
+        margin-top: 3px;
+        font-size: 15px;
+        line-height: 18.29px;
+        color: #222222;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0;
+        position: relative;
+        margin-right: 10px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 4px; }
+        .form_wrap .custom-select-field .selected_options .del {
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          width: 5px;
+          height: 5px;
+          display: block;
+          z-index: 10; }
+          .form_wrap .custom-select-field .selected_options .del::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 5px;
+            background-image: url("../img/close.png");
+            background-size: cover;
+            background-repeat: no-repeat; }
+    .form_wrap .custom-select-dropdown {
+      max-width: 238px;
+      width: 100%;
+      max-height: 170px;
+      height: auto;
+      background: #fff;
+      padding: 17px 0 0 17px;
+      overflow: scroll;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10; }
+      .form_wrap .custom-select-dropdown span {
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+        color: #222222;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0;
+        margin-bottom: 13px;
+        cursor: pointer; }
+        .form_wrap .custom-select-dropdown span:hover {
+          color: #A5B330; }
